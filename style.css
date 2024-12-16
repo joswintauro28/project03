@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url('eg.jpeg'); /* Add the background image */
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    color: rgb(74, 176, 185);
+}
+
+.board {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 20px; /* Optional: Add padding to create space between the grid and the edges */
+    background-color: rgba(255, 255, 255, 0); /* Semi-transparent background to allow the blur effect to show */
+    border-radius: 10px; /* Optional: Add rounded corners to the board */
+}
+
+#gameMode, option {
+    border: 2px solid black;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #9554a0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for small devices */
+    .board {
+        grid-template-columns: repeat(3, 80px);
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 30px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
