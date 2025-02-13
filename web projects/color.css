@@ -1,0 +1,14 @@
+header{
+	width:1460px;
+	height:100px;
+	background-color:#3CB898;
+	border-radius:30px;
+	align-items:center;
+}
+footer{
+width:1460px;
+height:60px;
+background-color:#314543	;
+align-items:center;
+border-radius:20px;
+}
